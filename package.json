@@ -1,0 +1,24 @@
+{
+  "name": "sass_live_streaming",
+  "version": "1.0.0",
+  "description": "landing page",
+  "homepage": "https://github.com/AslanG92/live_streaming#readme",
+  "bugs": {
+    "url": "https://github.com/AslanG92/live_streaming/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AslanG92/live_streaming.git"
+  },
+  "license": "ISC",
+  "author": "Aslan G",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "sass": "^1.102.0"
+  }
+}
