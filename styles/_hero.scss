@@ -1,0 +1,204 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+@use "sass:color";
+
+.hero {
+  position: relative;
+  max-width: 1260px;
+  height: 830px;
+  margin: 0 auto;
+  padding: 140px 0 0 0;
+  background: url("../assets/img/cloud_alpha.png") center/contain no-repeat;
+
+  .content {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+
+    &__title {
+      @include m.font(120px, 700, v.$color_black);
+      line-height: 1;
+    }
+
+    &__action-btn {
+      width: 380px;
+      height: 80px;
+      background-color: v.$color_black;
+      border: none;
+      border-radius: 90px;
+      @include m.font(28px, 500, v.$color_white);
+      @include m.position(absolute, 1, -1, bottom, right, 15px, -40px);
+
+      &:hover {
+        cursor: pointer;
+        background-color: color.adjust(v.$color_black, $alpha: -0.5);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: 2px solid v.$color_white;
+      }
+    }
+
+    @media (max-width: v.$media_lg) {
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+      &__title {
+        @include m.font(100px, 700, v.$color_black);
+      }
+
+      &__action-btn {
+        @include m.position(absolute, 1, -1, bottom, left, 0, 15px);
+      }
+    }
+
+    @media (max-width: v.$media_md) {
+      max-width: 560px;
+      height: 400px;
+      &__title {
+        @include m.font(85px, 700, v.$color_black);
+      }
+
+      &__action-btn {
+        width: 260px;
+        height: 60px;
+        @include m.font(18px, 400, v.$color_white);
+      }
+    }
+
+    @media (max-width: v.$media_sm) {
+      max-width: 350px;
+      height: 280px;
+      &__title {
+        @include m.font(55px, 500, v.$color_black);
+      }
+    }
+  }
+
+  .notify {
+    position: relative;
+    margin: 170px auto 0;
+    width: 680px;
+    height: 60px;
+    background-color: #6981bc;
+    border-radius: 20px;
+    @include m.d-flex(end, center, nowrap, row, 10px);
+
+    &__img {
+      width: 126px;
+      height: 198px;
+      @include m.position(absolute, 1, -1, top, left, -75px, -28px);
+    }
+
+    &__content {
+      width: 450px;
+      height: 100%;
+      border-right: 1px solid v.$color_white;
+      line-height: 14px;
+      text-transform: uppercase;
+      @include m.d-flex(center, center, nowrap);
+      @include m.font(14px, 400, v.$color_black);
+    }
+
+    &__btn {
+      width: 120px;
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      @include m.font(25px, 400, v.$color_black);
+      @extend %hover-light;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: 2px solid v.$color_white;
+        border-radius: 10px;
+      }
+    }
+
+    @media (max-width: v.$media_md) {
+      margin: 150px auto 0;
+      width: 100%;
+      max-width: 450px;
+      height: fit-content;
+      @include m.d-flex(start, center, nowrap, column, 0, 0);
+
+      &__content {
+        width: 100%;
+        padding: 15px 10px 15px 90px;
+        border-right: none;
+        border-bottom: 1px solid v.$color_white;
+        line-height: 16px;
+        @include m.font(12px, 400, v.$color_black);
+      }
+
+      &__btn {
+        @include m.font(30px, 400, v.$color_black);
+        padding: 15px 0;
+      }
+    }
+
+    @media (max-width: v.$media_sm) {
+      &__img {
+        @include m.position(absolute, 1, -1, top, left, -55px, -10px);
+      }
+
+      &__content {
+        padding: 10px 10px 10px 110px;
+        @include m.font(10px, 400, v.$color_black);
+      }
+    }
+  }
+
+  .scroll {
+    @include m.position(absolute, 1, -1, bottom, left, 200px, 20px);
+
+    &__content {
+      position: relative;
+      @include m.font(16px, 500, v.$color_white);
+      writing-mode: vertical-rl;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        @include m.position(absolute, 1, -1, top, left, 120px, 8px);
+        width: 1px;
+        height: 85px;
+        background-color: v.$color_white;
+      }
+    }
+
+    @media (max-width: v.$media_lg) {
+      @include m.position(absolute, 1, -1, bottom, left, 50px, 8px);
+    }
+
+    @media (max-width: v.$media_md) {
+      @include m.position(absolute, 1, -1, bottom, left, 150px, 8px);
+    }
+
+    @media (max-width: v.$media_sm) {
+      @include m.position(absolute, 1, -1, bottom, left, 200px, 8px);
+    }
+  }
+
+  @media (max-width: v.$media_lg) {
+    background: url("../assets/img/cloud_alpha.png") 0 40% / contain no-repeat;
+  }
+
+  @media (max-width: v.$media_md) {
+    padding: 100px 15px 0;
+    background: url("../assets/img/cloud_alpha.png") 0 25% / contain no-repeat;
+  }
+
+  @media (max-width: v.$media_sm) {
+    height: 700px;
+  }
+}
