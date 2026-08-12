@@ -75,7 +75,7 @@
       max-width: 350px;
       height: 280px;
       &__title {
-        @include m.font(55px, 500, v.$color_black);
+        @include m.font(50px, 500, v.$color_black);
       }
     }
   }
@@ -85,7 +85,7 @@
     margin: 170px auto 0;
     width: 680px;
     height: 60px;
-    background-color: #6981bc;
+    background-color: color.adjust(v.$color_white, $alpha: -0.85);
     border-radius: 20px;
     @include m.d-flex(end, center, nowrap, row, 10px);
 
