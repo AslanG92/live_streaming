@@ -11,17 +11,17 @@
   padding: 140px 0 0 0;
   background: url("../assets/img/cloud_alpha.png") center/contain no-repeat;
 
-  .content {
+  .hero__content {
     position: relative;
     width: 900px;
     margin: 0 auto;
 
-    &__title {
+    &-title {
       @include m.font(120px, 700, v.$color_black);
       line-height: 1;
     }
 
-    &__action-btn {
+    &-action-btn {
       width: 380px;
       height: 80px;
       background-color: v.$color_black;
@@ -48,11 +48,11 @@
       width: 100%;
       max-width: 700px;
       height: 500px;
-      &__title {
+      &-title {
         @include m.font(100px, 700, v.$color_black);
       }
 
-      &__action-btn {
+      &-action-btn {
         @include m.position(absolute, 1, -1, bottom, left, 0, 15px);
       }
     }
@@ -60,11 +60,11 @@
     @media (max-width: v.$media_md) {
       max-width: 560px;
       height: 400px;
-      &__title {
+      &-title {
         @include m.font(85px, 700, v.$color_black);
       }
 
-      &__action-btn {
+      &-action-btn {
         width: 260px;
         height: 60px;
         @include m.font(18px, 400, v.$color_white);
@@ -74,13 +74,13 @@
     @media (max-width: v.$media_sm) {
       max-width: 350px;
       height: 280px;
-      &__title {
+      &-title {
         @include m.font(50px, 500, v.$color_black);
       }
     }
   }
 
-  .notify {
+  .hero__notify {
     position: relative;
     margin: 170px auto 0;
     width: 680px;
@@ -89,13 +89,13 @@
     border-radius: 20px;
     @include m.d-flex(end, center, nowrap, row, 10px);
 
-    &__img {
+    &-img {
       width: 126px;
       height: 198px;
       @include m.position(absolute, 1, -1, top, left, -75px, -28px);
     }
 
-    &__content {
+    &-content {
       width: 450px;
       height: 100%;
       border-right: 1px solid v.$color_white;
@@ -105,7 +105,7 @@
       @include m.font(14px, 400, v.$color_black);
     }
 
-    &__btn {
+    &-btn {
       width: 120px;
       background: none;
       border: none;
@@ -130,7 +130,7 @@
       height: fit-content;
       @include m.d-flex(start, center, nowrap, column, 0, 0);
 
-      &__content {
+      &-content {
         width: 100%;
         padding: 15px 10px 15px 90px;
         border-right: none;
@@ -139,28 +139,28 @@
         @include m.font(12px, 400, v.$color_black);
       }
 
-      &__btn {
+      &-btn {
         @include m.font(30px, 400, v.$color_black);
         padding: 15px 0;
       }
     }
 
     @media (max-width: v.$media_sm) {
-      &__img {
+      &-img {
         @include m.position(absolute, 1, -1, top, left, -55px, -10px);
       }
 
-      &__content {
+      &-content {
         padding: 10px 10px 10px 110px;
         @include m.font(10px, 400, v.$color_black);
       }
     }
   }
 
-  .scroll {
+  .hero__scroll {
     @include m.position(absolute, 1, -1, bottom, left, 200px, 20px);
 
-    &__content {
+    &-content {
       position: relative;
       @include m.font(16px, 500, v.$color_white);
       writing-mode: vertical-rl;
