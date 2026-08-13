@@ -121,3 +121,34 @@
     width: 300px;
   }
 }
+
+.testimonial-card {
+  width: 500px;
+  height: 275px;
+  background: url(../assets/wave_card_bg.svg) center/contain no-repeat;
+  @include m.d-flex(start, start, nowrap, column, 0, 35px);
+
+  &__avatar {
+    margin: 20px 0 0 20px;
+  }
+
+  &__quote {
+    @include m.font(20px, 400, v.$color_white);
+    margin: 0 30px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: v.$media_md) {
+    width: 330px;
+    row-gap: 15px;
+    background: url(../assets/wave_card_bg.svg) 50% 0 / contain no-repeat;
+
+    &__avatar {
+      margin: 15px 0 0 15px;
+    }
+
+    &__quote {
+      @include m.font(13px, 400, v.$color_white);
+    }
+  }
+}
