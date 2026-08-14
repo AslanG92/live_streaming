@@ -71,11 +71,25 @@
       }
     }
 
+    @media (max-width: v.$media_md) {
+      max-width: 350px;
+      height: 280px;
+      &-title {
+        @include m.font(50px, 500, v.$color_black);
+      }
+    }
+
     @media (max-width: v.$media_sm) {
       max-width: 350px;
       height: 280px;
       &-title {
         @include m.font(50px, 500, v.$color_black);
+      }
+    }
+
+    @media (max-width: v.$media_min) {
+      &-title {
+        @include m.font(45px, 500, v.$color_black);
       }
     }
   }
