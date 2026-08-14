@@ -32,7 +32,7 @@
 
   &:hover {
     cursor: pointer;
-    border-color: #d0d0d0;
+    border-color: v.$color_lightwhite_border;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     transform: translateY(-4px);
     .info-card__icon {
