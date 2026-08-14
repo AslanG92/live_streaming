@@ -24,11 +24,27 @@
                 <div class="nav__links">
                     <ul class="nav__links-list list" aria-label="header nav links">
                         <li class="list__item" aria-label="first link">
-                            <a href="#" class="list__item-link">about us</a>
+                            <a href="#work" class="list__item-link">Work</a>
                         </li>
 
                         <li class="list__item" aria-label="second link">
-                            <a href="#" class="list__item-link">contact</a>
+                            <a href="#about" class="list__item-link">About</a>
+                        </li>
+
+                        <li class="list__item" aria-label="third link">
+                            <a href="#experience" class="list__item-link">Experience</a>
+                        </li>
+
+                        <li class="list__item" aria-label="fourth link">
+                            <a href="#testimonials" class="list__item-link">Testimonials</a>
+                        </li>
+
+                        <li class="list__item" aria-label="fifth link">
+                            <a href="#form_section" class="list__item-link">Form</a>
+                        </li>
+
+                        <li class="list__item" aria-label="sixth link">
+                            <a href="#contacts" class="list__item-link">Contacts</a>
                         </li>
                     </ul>
                 </div>
@@ -47,6 +63,51 @@
             </nav>
         </div>
     </header>
+
+    <div class="mobile-navigation">
+        <label for="checkboxID" class="mobile-navigation__burger">
+            <svg class="mobile-navigation__burger-icon" aria-label="burger img">
+                <use href="assets/sprites.svg#burger-icon"></use>
+            </svg>
+        </label>
+
+        <input type="checkbox" id="checkboxID" class="mobile-navigation__toogler">
+
+        <nav class="mobile-navigation__menu nav">
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="#work" class="nav__list-item-link">How we work</a>
+                </li>
+
+                <li class="nav__list-item">
+                    <a href="#about" class="nav__list-item-link">About us</a>
+                </li>
+
+                <li class="nav__list-item">
+                    <a href="#experience" class="nav__list-item-link">Our experience</a>
+                </li>
+
+                <li class="nav__list-item">
+                    <a href="#testimonials" class="nav__list-item-link">Testimonials</a>
+                </li>
+
+                <li class="nav__list-item">
+                    <a href="#form_section" class="nav__list-item-link">Form</a>
+                </li>
+
+                <li class="nav__list-item">
+                    <a href="#contacts" class="nav__list-item-link">Contacts</a>
+                </li>
+            </ul>
+
+            <label for="checkboxID" class="nav__close">
+                <svg class="nav__close-icon" aria-label="close img">
+                    <use href="assets/sprites.svg#cross-icon"></use>
+                </svg>
+            </label>
+        </nav>
+
+    </div>
 
     <main aria-label="main content">
         <section class="hero-section" aria-label="hero section">
@@ -72,7 +133,7 @@
             </div>
         </section>
 
-        <section class="work-section" aria-label="work section">
+        <section class="work-section" aria-label="work section" id="work">
             <div class="container">
                 <div class="work">
                     <h2 class="work__title">How we work</h2>
@@ -144,7 +205,7 @@
 
         <hr class="divider">
 
-        <section class="about-section" aria-label="about section">
+        <section class="about-section" aria-label="about section" id="about">
             <div class="container">
                 <div class="about">
                     <div class="about__quality">
@@ -175,7 +236,7 @@
 
         <hr class="divider">
 
-        <section class="experience-section" aria-label="experience section">
+        <section class="experience-section" aria-label="experience section" id="experience">
             <div class="container">
                 <div class="experience">
                     <h2 class="experience__title">Our experience</h2>
@@ -221,7 +282,7 @@
             </div>
         </section>
 
-        <section class="tetimonials-section" aria-label="tetimonials section">
+        <section class="tetimonials-section" aria-label="tetimonials section" id="testimonials">
             <div class="container">
                 <div class="testimonials">
                     <h2 class="testimonials__title">Testimonials</h2>
@@ -263,18 +324,16 @@
             </div>
         </section>
 
-        <section class="form-section" aria-label="form section">
+        <section class="form-section" aria-label="form section" id="form_section">
             <div class="container">
                 <div class="form-section__wrapper">
                     <form action="mailto:streaming_company@gmail.com" class="form" aria-labelledby="form-title">
                         <label for="input-name" id="form-title" class="form__title">Ready to get started? <span>Drop us
                                 a line!</span></label>
-                        <input id="input-name" type="text" placeholder="Name" class="form__name" aria-required="true"
-                            required>
-                        <input id="input-email" type="email" placeholder="Email" class="form__email"
-                            aria-required="true" required>
+                        <input id="input-name" type="text" placeholder="Name" class="form__name" required>
+                        <input id="input-email" type="email" placeholder="Email" class="form__email" required>
                         <input id="input-text" type="text" placeholder="What we can do for you?" class="form__text"
-                            aria-required="true" required>
+                            required>
 
                         <button type="submit" class="form__submit-btn">Send</button>
                     </form>
@@ -286,7 +345,7 @@
         </section>
     </main>
 
-    <footer class="footer-section" aria-label="footer section">
+    <footer class="footer-section" aria-label="footer section" id="contacts">
         <div class="container">
             <div class="footer">
                 <div class="footer__terms">

@@ -30,13 +30,19 @@
 
         @extend %hover-black;
       }
+
+      @media (max-width: v.$media_lg) {
+        .nav__title-link {
+          font-size: 18px;
+        }
+      }
     }
 
     &__links {
       flex-grow: 1;
 
       .list {
-        @include m.d-flex(start, center, nowrap, row, min(100px, 3vw), 0);
+        @include m.d-flex(start, center, nowrap, row, min(100px, 1.5vw), 0);
         padding: 0 0 0 min(100px, 3vw);
 
         &__item {
@@ -52,8 +58,14 @@
 
       @media (max-width: v.$media_lg) {
         .list {
-          @include m.d-flex(center, center, nowrap, row, min(100px, 3vw), 0);
+          @include m.d-flex(center, center, nowrap, row, min(100px, 1.5vw), 0);
           padding: 0 0 0 0;
+
+          &__item {
+            &-link {
+              font-size: 18px;
+            }
+          }
         }
       }
     }
@@ -88,6 +100,85 @@
           fill: v.$color_white;
           @extend %hover-black-icon;
         }
+      }
+    }
+
+    @media (max-width: v.$media_md) {
+      &__links,
+      .covid,
+      .globe {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile-navigation {
+  display: none;
+
+  &__burger {
+    @include m.position(absolute, 10, -1, top, right, 10px, 20px);
+
+    &-icon {
+      width: 33px;
+      height: 22px;
+      stroke: v.$color_white;
+
+      @extend %hover-black-icon-svg;
+    }
+  }
+
+  &__toogler {
+    display: none;
+
+    &:checked + .nav {
+      translate: 0;
+    }
+  }
+
+  .nav {
+    padding: 100px 80px 0;
+    @include m.position(fixed, 999, 0);
+    background-color: color.adjust(v.$color_black, $alpha: -0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    translate: 100% 0;
+    transition: translate 0.5s;
+
+    &__list {
+      @include m.d-flex(start, start, nowrap, column, 0, 30px);
+
+      &-item {
+        &-link {
+          @include m.font(35px, 400, v.$color_white);
+          text-shadow: 0 8px 3px rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+
+    &__close {
+      @include m.position(absolute, 10, -1, top, right, 20px, 25px);
+
+      &-icon {
+        width: 25px;
+        height: 22px;
+        stroke: v.$color_white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (max-width: v.$media_md) {
+    display: block;
+  }
+
+  @media (max-width: v.$media_min) {
+    .nav__list-item {
+      &-link {
+        @include m.font(25px, 400, v.$color_white);
       }
     }
   }

@@ -20,3 +20,10 @@
     fill: v.$color_black;
   }
 }
+
+%hover-black-icon-svg {
+  &:hover {
+    cursor: pointer;
+    stroke: v.$color_black;
+  }
+}
